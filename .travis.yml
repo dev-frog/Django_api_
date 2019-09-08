@@ -3,5 +3,5 @@ python:
   - "3.6"
 before_script: pip install -r requirments.txt
 script:
-  - python manage.py test && python flake8
+  - python manage.py test && flake8
 
