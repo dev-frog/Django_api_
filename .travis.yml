@@ -1,0 +1,7 @@
+language: python
+python:
+  - "3.6"
+before_script: pip install -r requirments.txt
+script:
+  - python manage.py test && flake8
+
