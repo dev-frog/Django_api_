@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin, AbstractUser
 
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
@@ -11,8 +11,7 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-
-    def create_supperuser(self,email,password):
+    def create_superuser(self,email,password):
         """ Create a new superUser """
         user = self.create_user(email, password)
         user.is_staff= True
