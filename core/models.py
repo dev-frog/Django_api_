@@ -9,7 +9,8 @@ class UserManager(BaseUserManager):
         user = self.model(email=self.normalize_email(email), **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
-        return user 
+        return user
+
 
     def create_supperuser(self,email,password):
         """ Create a new superUser """
@@ -17,7 +18,7 @@ class UserManager(BaseUserManager):
         user.is_staff= True
         user.is_superuser= True
         user.save(using=self._db)
-        return user 
+        return user
 
 class User(AbstractBaseUser,PermissionsMixin):
     """ custom user model  """
