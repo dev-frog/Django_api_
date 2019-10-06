@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "C:\\Users\\Frog\\.windows-build-tools\\python27\\python.exe",
+    "python.formatting.provider": "black"
+}

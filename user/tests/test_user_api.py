@@ -7,6 +7,7 @@ from rest_framework import status
 CREATE_USER_URL = reverse('user:create')
 TOKEN_URL = reversed('user:token')
 
+
 def create_user(**param):
     return get_user_model().objects.create_user(**param)
 
